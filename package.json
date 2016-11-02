@@ -1,6 +1,6 @@
 {
-  "name": "flatten-packages",
-  "version": "0.1.3",
+  "name": "flatten2",
+  "version": "0.2.0",
   "description": "flat packages in node_modules ",
   "main": "index.js",
   "bin": {
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/arifsetiawan/flatten"
+    "url": "https://github.com/regiontog/flatten"
   },
   "keywords": [
     "flatten",
@@ -23,18 +23,18 @@
     "package"
   ],
   "author": {
-    "name": "Nurul Arif Setiawan",
-    "email": "n.arif.setiawan@gmail.com"
+    "name": "Erlend Tobiassen",
+    "email": "erlend.tobiassen@gmail.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/arifsetiawan/flatten/issues"
+    "url": "https://github.com/regiontog/flatten/issues"
   },
   "dependencies": {
-    "semver": "~2.2.1",
-    "wrench": "~1.5.4",
+    "colors": "~0.6.2",
     "commander": "~2.1.0",
-    "colors": "~0.6.2"
+    "semver": "~2.2.1",
+    "wrench": "~1.5.4"
   },
-  "homepage": "https://github.com/arifsetiawan/flatten"
+  "homepage": "https://github.com/regiontog/flatten"
 }

@@ -7,7 +7,7 @@ Nested node_modules are subjectively messy and sometimes we want it to be flat. 
 ## Installation
 
 ```
-$ npm install -g flatten-packages
+$ npm install -g regiontog/flatten
 ```
 
 ## How to use

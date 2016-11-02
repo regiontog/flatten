@@ -6,11 +6,18 @@ var version = pkg.version
 var flatten = require('../lib/flatten')
 var printmodules = require('../lib/print')
 
+console.log(process.argv)
 program
   .version(version)
   .usage('[options] [dir]')
   .option('-i, --info', 'Show only information about node_modules without flattening it')
+  .option('-r, --root', 'Walk all folders in dir instead of looking for the node_modules folder')
   .option('-p, --print', 'Helper function to print node_modules content. Usefull to fill package.json dependencies. Only first level is printed')
+  .option('-c, --copy', 'Copy packages instead of moving and deleting')
+  .option('-D, --dry', 'Run without touching any files/directories')
+  .option('--force', 'Whether to overwrite existing directory or not when copying')
+  .option('--target [target]', 'Move/copy into target dir instead of default( [dir]/node_modules )')
+  .option('-I, --ignore [regex]', 'Ignore packages that matches a regex')
   .parse(process.argv)
 
 var path = program.args.shift() || '.'
@@ -22,7 +29,7 @@ if (program.print) {
   });
 }
 else {
-  flatten(path, { info: program.info }, function (err, res) {
+  flatten(path, program, function (err, res) {
     if (err) console.error(err)
     if (res) return console.log(res)
   });
