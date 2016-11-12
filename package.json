@@ -1,6 +1,6 @@
 {
   "name": "flatten2",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "flat packages in node_modules ",
   "main": "index.js",
   "bin": {
